@@ -1,0 +1,17 @@
+---
+import GithubIcon from './GithubIcon.astro'
+import LinkedInIcon from './LinkedInIcon.astro'
+import SocialLink from './SocialLink.astro'
+import TwitterIcon from './TwitterIcon.astro'
+import XingIcon from './XingIcon.astro'
+---
+
+<ul class="flex items-center gap-6">
+  <SocialLink icon={GithubIcon} href="https://github.com/gapurov/" />
+  <SocialLink icon={TwitterIcon} href="https://twitter.com/ired/" />
+  <SocialLink
+    icon={XingIcon}
+    href="https://www.xing.com/profile/Vladislav_Gapurov/"
+  />
+  <SocialLink icon={LinkedInIcon} href="https://www.linkedin.com/in/gapurov/" />
+</ul>

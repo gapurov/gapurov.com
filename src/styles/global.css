@@ -1,0 +1,21 @@
+@font-face {
+  font-named-instance: Regular;
+  font-display: swap;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(/fonts/Fira-Sans.var.woff2) format('woff2');
+}
+
+@font-face {
+  font-named-instance: Italic;
+  font-display: swap;
+  font-family: Fira Sans;
+  font-style: italic;
+  font-weight: 100 900;
+  src: url(/fonts/Fira-Sans-Italic.var.woff2) format('woff2');
+}
+
+p {
+  margin: 0 0 25px 0;
+}

@@ -1,0 +1,20 @@
+---
+type Props = {
+  className?: string
+  href?: string
+  icon: astroHTML.JSX.Element
+}
+
+const { className, href = '', icon: Icon } = Astro.props
+---
+
+<li class:list={[className]}>
+  <a
+    href={href}
+    class="group block text-sm font-medium text-slate-500 transition duration-500 hover:text-orange-500 hover:no-underline dark:hover:text-orange-500"
+  >
+    <Icon
+      class="h-9 w-9 fill-slate-500 transition duration-500 group-hover:fill-orange-500"
+    />
+  </a>
+</li>

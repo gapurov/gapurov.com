@@ -1,0 +1,26 @@
+---
+type Props = {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<ul class:list={['flex flex-wrap gap-2 p-0', className]}>
+  {
+    [
+      'ES2015/17',
+      'React & Redux',
+      'Vue & Vuex',
+      'Sass/PostCSS',
+      'TypeScript',
+      'RxJS',
+      'Node',
+      'GraphQL',
+    ].map((skill) => (
+      <li class="inline-flex min-w-[75px] items-center justify-center rounded-full bg-green-500 px-4 py-1.5 font-normal text-white">
+        {skill}
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,34 @@
+---
+declare global {
+  interface Window {
+    appInfo: Record<string, string> | undefined
+  }
+}
+
+const { htmlComment = '', info } = Astro.props
+
+const htmlTag =
+  typeof document !== `undefined` ? document.querySelector('html') : undefined
+
+if (htmlComment && htmlTag) {
+  htmlTag.appendChild(document.createComment(htmlComment))
+}
+---
+
+<astro-island data-info={JSON.stringify(info)}></astro-island>
+
+<script>
+  class AstroIsland extends HTMLElement {
+    constructor() {
+      super()
+      // Read the message from the data attribute.
+      if (typeof window !== `undefined`) {
+        window.appInfo = JSON.parse(this.dataset.info!)
+      }
+    }
+  }
+
+  customElements.define('astro-island', AstroIsland)
+  // remove element from the DOM after the variable is stored on the window
+  document.querySelector('astro-island')?.remove()
+</script>

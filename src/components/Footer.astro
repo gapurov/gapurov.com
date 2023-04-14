@@ -1,0 +1,20 @@
+---
+type Props = {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<footer class:list={['w-full bg-orange-500 leading-3', className]}>
+  <div
+    class="relative mx-auto max-w-[600px] px-5 py-0 text-center text-slate-50"
+  >
+    <a href="/legal" class="m-2 inline-block text-lg">legal notice</a>
+    <a href="/privacy" class="m-2 inline-block text-lg">privacy</a>
+    <p>
+      proudly built with <a href="https://astro.build">Astro</a> and hosted by
+      <a href="https://netlify.com">netlify</a>
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,12 @@
+---
+type Props = {
+  className?: string
+  as?: string | astroHTML.JSX.Element
+}
+
+const { className, as: Component = 'div' } = Astro.props
+---
+
+<Component class:list={['mb-16 p-0 leading-7', className]}>
+  <slot />
+</Component>

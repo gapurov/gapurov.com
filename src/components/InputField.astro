@@ -1,0 +1,17 @@
+---
+type Props = astroHTML.JSX.IntrinsicElements['input']
+
+const { name = 'name', type = 'text', className, ...props } = Astro.props
+---
+
+<input
+  type={type}
+  name={name}
+  id={name}
+  autocomplete={name}
+  class:list={[
+    'block w-full rounded border-orange-500 bg-orange-700 px-4 py-2 shadow-sm transition duration-500 focus:border-white focus:ring-white',
+    className,
+  ]}
+  {...props}
+/>

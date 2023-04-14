@@ -1,0 +1,43 @@
+---
+import ContentWrapper from '~/components/ContentWrapper.astro'
+import ShowAppInfo from '~/components/ShowAppInfo.astro'
+import Skills from '~/components/Skills.astro'
+import SocialLinkList from '~/components/SocialLinkList.astro'
+import Section from '~/components/Section.astro'
+import Layout from '~/layouts/Layout.astro'
+import Contact from '~/components/Contact.astro'
+import Footer from '~/components/Footer.astro'
+import UnregisterSW from '~/components/UnregisterSW.astro'
+---
+
+<Layout>
+  <Section>
+    <h1>Hello!</h1>
+    <ContentWrapper as="p" className="text-lg leading-8">
+      I'm Vladislav Gapurov, Consultant JavaScript Developer. I'm fluent in the
+      modern web stack. I'm always curious about new technologies and happy to
+      play around with them. My particular areas of interest centre around Vue,
+      React and Node. Feel free to{' '}
+      <a href="#contact-form">contact me</a>.
+    </ContentWrapper>
+
+    <h2>Core Technical Skills</h2>
+    <ContentWrapper>
+      <Skills />
+    </ContentWrapper>
+    <ContentWrapper>
+      <SocialLinkList />
+    </ContentWrapper>
+  </Section>
+  <Section className="group bg-orange-500 pt-16">
+    <h2 class="inverted">Contact Me</h2>
+    <ContentWrapper>
+      <Contact />
+    </ContentWrapper>
+  </Section>
+  <Footer className="group bg-orange-500" />
+  <ShowAppInfo
+    info={{ i: '0DQTMtRzlYQTkyLUVORk1WRi1RUUo4Vi1NNFZaRS03VlE3NS1YOE5WTA==' }}
+  />
+  <UnregisterSW />
+</Layout>
