@@ -6,12 +6,5 @@ import mdx from '@astrojs/mdx'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://gapurov.com/',
-  integrations: [
-    mdx(),
-    tailwind({
-      // config: {
-      //   applyBaseStyles: false,
-      // },
-    }),
-  ],
+  integrations: [mdx(), tailwind()],
 })

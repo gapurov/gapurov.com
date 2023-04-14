@@ -3,8 +3,6 @@ const path = require('path')
 const fromRoot = (p) => path.join(__dirname, p)
 const defaultTheme = require('tailwindcss/defaultTheme')
 
-console.log(defaultTheme)
-
 module.exports = {
   content: [fromRoot('./src/**/*.+(astro|html|js|jsx|ts|tsx|mdx|md)')],
   theme: {
