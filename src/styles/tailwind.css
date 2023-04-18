@@ -9,7 +9,7 @@
     font-family: 'Fira Sans', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    @apply text-base text-slate-500 transition-all duration-300 ease-in-out;
+    @apply scroll-smooth text-base text-slate-500 transition-all duration-300 ease-in-out;
   }
 
   a,
