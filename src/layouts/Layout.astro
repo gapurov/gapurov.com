@@ -12,7 +12,7 @@ export type Props = {
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '~/config'
 import Logo from '~/components/Logo.astro'
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const {
   title = SITE_TITLE,
@@ -51,9 +51,6 @@ const {
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/png" href="/favicon.png" />
